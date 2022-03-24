@@ -42,24 +42,7 @@ main {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
 }
 
-#criar-tarefa {
-    border-radius: 1em;
-    height: 35px;
-    width: 130px;
-    font-size: 15px;
-    font-weight: 600;
-    color: rgb(255, 255, 255);
-    background-color: rgba(59, 31, 134, 0.466);
-    font-family: 'Courier New', Courier, monospace;
-}
-
-#botoes-extras {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.botao-extra {
+.botao{
     border-radius: 1em;
     height: 35px;
     width: 190px;
@@ -70,6 +53,10 @@ main {
     background-color: rgba(59, 31, 134, 0.466);
     justify-content: space-around;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
+}
+
+#botao-extra1, #botao-extra2{
+    margin-top: 10px;
 }
 
 #lista {
