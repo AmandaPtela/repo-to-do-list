@@ -13,19 +13,27 @@
 </header>
 <body>
     <main>
-        <input id="texto-tarefa" placeholder="Digite aqui a tarefa" ><br>
-        <button id="criar-tarefa" type="reset">Criar tarefa</button> <!-- clica e desaparece do inpt aparece na lista-->
-        
+        <div id="texto-botao">
+            <input id="texto-tarefa" placeholder="Digite aqui a tarefa">
+            <button id="criar-tarefa" type="submit">Criar tarefa</button> <!-- clica e desaparece do inpt aparece na lista--><br>
+        </div>
+        <div id="botoes-extras">
+            <button class="botao-extra" type="reset">Limpar Concluídos</button>
+            <button class="botao-extra" type="reset">Limpar Lista</button>
+        </div>
     </main>
     <div id="lista">
-        <ol id="lista-tarefas" >
-            <li>Lavar cabelo</li>
-            <li>Meditar</li>
-            <li>Fazer Atividade</li>
-            <li>Meditar</li>
-            <li>Meditar</li>
-            <li>Meditar</li>
+        <ol id="lista-tarefas" > Lista de Tarefas
+            <li class="item" >Lavar cabelo</li>
+            <li class="item" >Meditar</li>
+            <li class="item" >Fazer Atividade</li>
+            <li class="item" >Meditar</li>
+            <li class="item" >Meditar</li>
+            <li class="item" >Meditar</li>
         </ol>
+
     </div>
+    <script type="text/javascript" src="script.js"></script>
 </body>
+
 </html>
