@@ -3,7 +3,7 @@
 //  3input com id texto-tarefa (onde nova tarefa vai ser escrita)
 //  4lista ordenada dom id lista-tarefas
 
-//  6ordenar itens por ordem de criação
+
 
 //  8selecionar apenas 1 item por vez/ mais de um não pode
 //  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
@@ -15,9 +15,7 @@
 
 const botaoCriar = document.querySelector('#criar-tarefa');
 const listaTarefas = document.querySelector('#lista-tarefas');
-const item = ["opa"];
 const input = document.querySelector('#texto-tarefa');
-const tarefaNova = input.value;
 
 // 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista() {
@@ -27,14 +25,14 @@ function criarItemLista() {
   input.value = '';
 } 
 botaoCriar.addEventListener('click',criarItemLista) ;
+//  6ordenar itens por ordem de criação
 
 
 // 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg() {
-  let bgItem = listaTarefas.children;
-  for (let i = 0; i < listaTarefas.length; i += 1){
-    
-    bgItem.style.backgroundColor = 'gray';
+  for (i = 0; i < listaTarefas.length; i += 1);{
+  let item = listaTarefas.children
+  item[i].style.backgroundColor = 'gray';
   }
 }
 listaTarefas.addEventListener('click', mudarbg)
