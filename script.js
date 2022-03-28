@@ -7,33 +7,47 @@
 
 //  8selecionar apenas 1 item por vez/ mais de um não pode
 //  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
-//  10botao id apaga-tudo limpa a lista
+
 //  11botao remover finalizados (apenas concluidos são apagados)
 //  12botao salvar lista. caso a página seja recarregada a lista permanece
 //  13botao pra mudar posição do item pra cima (id mover-cima e mover-baixo) e pra baixo na lista
 //  14remover selecionado. remover apenas o selecionado
 
 const botaoCriar = document.querySelector('#criar-tarefa');
+const botaoApagarTudo = document.querySelector('#botao-apagaTudo');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
+let listaDeItens = document.querySelector('.item');
+
 
 // 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista() {
   let itemNovo = document.createElement('li');
   itemNovo.innerText = input.value;
   listaTarefas.appendChild(itemNovo);
+  itemNovo.className="item";
   input.value = '';
 } 
 botaoCriar.addEventListener('click',criarItemLista) ;
+
+function apagarTudo() {
+  while (listaTarefas.firstChild){
+    listaTarefas.removeChild(listaTarefas.firstChild);
+  }
+}
+botaoApagarTudo.addEventListener('click', apagarTudo);
+
 //  6ordenar itens por ordem de criação
 
 
 // 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg() {
   for (i = 0; i < listaTarefas.length; i += 1);{
-  let item = listaTarefas.children
-  item[i].style.backgroundColor = 'gray';
+  let item = listaTarefas.children[i];
+  item.style.backgroundColor = 'gray';
   }
 }
 listaTarefas.addEventListener('click', mudarbg)
-//
+
+//  10botao id apaga-tudo limpa a lista
+

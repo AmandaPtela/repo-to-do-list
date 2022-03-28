@@ -2,6 +2,9 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(32 , 122 , 92 , 0.733);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
@@ -55,29 +58,48 @@ main {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
 }
 
-#botao-extra1, #botao-extra2 {
+#botoes-extras {
   margin-top: 10px;
 }
 
 #lista {
-  width: 100%;
+  margin-top: 40px;
+  border-radius: 1.5em;
+  margin-bottom: 30px;
+  width: 300px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(32, 122, 92, 0.466);
+}
+
+label {
+  padding: 20px;
+  text-align: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 1em;
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  /*background-color: rgba(67 , 52 , 109 , 0.541);*/
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
 }
 
 ol {
+  position: relative; top: -19px;
   align-items: center;
   padding: 20px;
   text-align: left;
-  margin-top: 50px;
   padding-left: 50px;
   width: 200px;
   height: fit-content;
   border-radius: 1em;
   font-size: 20px;
   font-weight: 600;
-  color: rgb(215 , 191 , 219);
-  background-color: rgba(67 , 52 , 109 , 0.541);
+  /*color: rgb(215 , 191 , 219);*/
+  background-color: rgba(67, 52, 109, 0.137);
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif, Courier, monospace;
 }
 
@@ -86,4 +108,5 @@ li {
   line-height: 35px;
   color: white;
   font-weight: 500;
+  border-radius: 1em;
 }
