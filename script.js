@@ -22,6 +22,7 @@ const tarefaNova = input.value;
 // 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista() {
   for (let i = 0; i < item.length; i += 1) {
+    
     let itemNovo = document.createElement('li');
     itemNovo.innerText = tarefaNova;
     listaTarefas.appendChild(itemNovo);
