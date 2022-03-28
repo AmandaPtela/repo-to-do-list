@@ -13,7 +13,7 @@
 //13botao pra mudar posição do item pra cima (id mover-cima e mover-baixo) e pra baixo na lista
 //14remover selecionado. remover apenas o selecionado
 
-const botao = document.querySelector("#criar-tarefa");
+const botaoCriar = document.querySelector("#criar-tarefa");
 const listaTarefas = document.querySelector("#lista-tarefas");
 const item = ["opa"];
 const areaTexto = document.querySelector("#texto-tarefa");
@@ -23,21 +23,20 @@ const tarefaNova = areaTexto.value;
 //5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista(){
   for(let i=0; i < item.length; i +=1){
-    let novoItem =  item[i];
+    let input =  areaTexto.value = "";
     let itemNovo = document.createElement('li');
     itemNovo.innerText=tarefaNova;
     listaTarefas.appendChild(itemNovo);
   } 
 } 
-//adicionar a limpeza do input 
-botao.addEventListener("click",criarItemLista) ;
+botaoCriar.addEventListener("click",criarItemLista) ;
 
 
 //7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg() {
 
   for (i = 0; i < listaTarefas.length; i +=1){
-    let bgItem = listaTarefas.childNode;
+    let bgItem = listaTarefas.children;
     bgItem.style.backgroundColor='gray';
   }
 }
