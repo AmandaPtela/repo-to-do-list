@@ -25,7 +25,7 @@ function criarItemLista() {
     let itemNovo = document.createElement('li');
     itemNovo.innerText = tarefaNova;
     listaTarefas.appendChild(itemNovo);
-    input =  input.value = "";
+    input = input.value = "";
   } 
 } 
 botaoCriar.addEventListener("click",criarItemLista) ;
