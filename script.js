@@ -22,23 +22,22 @@ const tarefaNova = input.value;
 // 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista() {
   for (let i = 0; i < item.length; i += 1) {
-    
     let itemNovo = document.createElement('li');
     itemNovo.innerText = tarefaNova;
     listaTarefas.appendChild(itemNovo);
     input = input.value = "";
   } 
 } 
-botaoCriar.addEventListener("click",criarItemLista) ;
+botaoCriar.addEventListener('click',criarItemLista) ;
 
 
 // 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg() {
 
-  for (i = 0; i < listaTarefas.length; i += 1){
+  for (let i = 0; i < listaTarefas.length; i += 1){
     let bgItem = listaTarefas.children;
-    bgItem.style.backgroundColor ='gray';
+    bgItem.style.backgroundColor = 'gray';
   }
 }
-itensLista.addEventListener("click", mudarbg)
+bgItem.addEventListener('click', mudarbg)
 //
