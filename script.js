@@ -34,7 +34,6 @@ function mudarbg(ev) {
   for (i = 0; i < listaTarefas.length; i += 1);{
     let item = listaTarefas.children[i];
     ev.target.style.backgroundColor = 'gray';
-    ev.target.className='selected';
   }
 }
 listaTarefas.addEventListener('click', mudarbg)
@@ -50,7 +49,7 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 //  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 
 function concluir(ev) { 
-  
-  ev.selecionados.style.textDecoration='line-through';
+  ev.target.style.textDecoration='line-through solid black';
+  ev.target.className='completed'
 }
 listaTarefas.addEventListener('dblclick', concluir);
