@@ -48,7 +48,7 @@ function apagarTudo() {
 }
 botaoApagarTudo.addEventListener('click', apagarTudo);
 
-//  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
+// ok 9 clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 // pesquisei no mdn. Toggle alterna a classe (on/off)
 function concluir(ev) { 
   ev.target.classList.toggle('completed');
