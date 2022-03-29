@@ -12,6 +12,7 @@
 
 const botaoCriar = document.querySelector('#criar-tarefa');
 const botaoApagarTudo = document.querySelector('#apaga-tudo');
+const botaoApagarFinalizados = document.querySelector('#remover-finalizados')
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
 
@@ -20,7 +21,7 @@ function criarItemLista(ev) {
   const itemNovo = document.createElement('li');
   itemNovo.innerText = input.value;
   listaTarefas.appendChild(itemNovo);
-  itemNovo.className="item";
+  itemNovo.className = 'item';
   input.value = '';
   ev.target.backgroundColor = 'red';
 } 
@@ -30,9 +31,10 @@ botaoCriar.addEventListener('click', criarItemLista);
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg(ev) {
-  for (let i = 0; i < listaTarefas.length; i += 1); {
+  for ( i = 0; i < 1; i += 1); {
     let item = listaTarefas.children[i];
     ev.target.style.backgroundColor = 'gray';
+    ev.target.className = 'selected';
   }
 }
 listaTarefas.addEventListener('click', mudarbg);
@@ -49,17 +51,15 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 
 function concluir(ev) { 
   ev.target.style.textDecoration = 'line-through solid black';
-  ev.target.className = 'completed'
+  ev.target.className = 'completed';
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
-function apargarSelecionados(params) {
-  
-}
+function apagarSelecionados() {}
+
 
 function salvarLista(params) {
   
 }
-function removerselecionado(params) {
-
-}
+function removerselecionado() {
+os.addEventListener('click', removerselecionado);}
