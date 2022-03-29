@@ -18,7 +18,7 @@ const concluidos = document.getElementsByTagName('li');
 const selecionados = document.querySelector('.selected');
 
 // ok 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
-function criarItemLista(ev); {
+function criarItemLista(ev) {
   const itemNovo = document.createElement('li');
   itemNovo.innerText = input.value;
   listaTarefas.appendChild(itemNovo);
