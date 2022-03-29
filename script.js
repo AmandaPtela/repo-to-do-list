@@ -55,12 +55,6 @@ function concluir(ev) {
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
-//function desfazerConcluir(ev) { 
-//  ev.target.classList.remove('completed');
-//}
-//listaTarefas.addEventListener('click', desfazerConcluir);
-
-//  11botao remover finalizados (apenas concluidos são apagados)
 function apagarFinalizados() {
 }
 botaoApagarFinalizados.addEventListener('click', apagarFinalizados)
