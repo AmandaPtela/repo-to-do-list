@@ -5,22 +5,20 @@
 
 //  8selecionar apenas 1 item por vez/ mais de um não pode
 
-
 //  12botao salvar lista. caso a página seja recarregada a lista permanece
 //  13botao pra mudar posição do item pra cima (id mover-cima e mover-baixo) e pra baixo na lista
 //  14remover selecionado. remover apenas o selecionado
 
 const botaoCriar = document.querySelector('#criar-tarefa');
 const botaoApagarTudo = document.querySelector('#apaga-tudo');
-const botaoApagarFinalizados = document.querySelector('#remover-finalizados')
+const botaoApagarFinalizados = document.querySelector('#remover-finalizados');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
 const concluidos = document.getElementsByTagName('li');
 const selecionados = document.querySelector('.selected');
-const teclado = KeyboardEvent
 
 // ok 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
-function criarItemLista(ev) {
+function criarItemLista(ev); {
   const itemNovo = document.createElement('li');
   itemNovo.innerText = input.value;
   listaTarefas.appendChild(itemNovo);
