@@ -32,13 +32,13 @@ botaoCriar.addEventListener('click', criarItemLista);
 // ok 6ordenar itens por ordem de criação
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
-/*function mudarbg(ev) {
+function mudarbg(ev) {
   for ( i = 0; i < 1; i += 1); {
     let item = listaTarefas.children[i];
     ev.target.className = 'selected';
   }
 }
-listaTarefas.addEventListener('click', mudarbg);*/
+listaTarefas.addEventListener('click', mudarbg);
 
 // ok 10 botao id apaga-tudo limpa a lista
 function apagarTudo() {
