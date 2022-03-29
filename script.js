@@ -14,8 +14,9 @@ const botaoApagarTudo = document.querySelector('#apaga-tudo');
 const botaoApagarFinalizados = document.querySelector('#remover-finalizados');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
-const concluidos = document.getElementsByTagName('li');
+const itenss = document.getElementsByTagName('li');
 const selecionados = document.querySelector('.selected');
+const finalizados = document.querySelector('.finalizados');
 
 // ok 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista(ev) {
@@ -33,7 +34,7 @@ botaoCriar.addEventListener('click', criarItemLista);
 function mudarbg(ev) {
   for ( i = 0; i < 1; i += 1); {
     let item = listaTarefas.children[i];
-    ev.target.className = 'selected';
+    ev.target.className= 'selected';
   }
 }
 listaTarefas.addEventListener('click', mudarbg);
@@ -49,17 +50,29 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 // ok 9 clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 // pesquisei no mdn. Toggle alterna a classe (on/off)
 function concluir(ev) { 
-  ev.target.classList.toggle('completed');
+
+  if (listaTarefas.classList.contains('completed') ){
+    //ev.target.classList.remove('completed');
+  }
+  else{  ev.target.classList.add('completed' , 'finalizados');}
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
-function apagarFinalizados() {
+function apagarFinalizados() { 
+  let itemFinalizado = document.getElementsByClassName('finalizados');
+  for (i = 0; i < listaTarefas.length; i += 1){
+  if (itenss.classList.contains('.finalizados')){
+  listaTarefas.remove(itemFinalizado);}
+  }
 }
 botaoApagarFinalizados.addEventListener('click', apagarFinalizados)
 
 
 function salvarLista(params) {
+
 }
 
 function removerselecionado() {
 }
+
+
