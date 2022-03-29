@@ -34,12 +34,12 @@ function mudarbg(ev) {
   for (i = 0; i < listaTarefas.length; i += 1);{
     let item = listaTarefas.children[i];
     ev.target.style.backgroundColor = 'gray';
+    ev.target.className='selected';
   }
 }
 listaTarefas.addEventListener('click', mudarbg)
 
 // ok 10 botao id apaga-tudo limpa a lista
-
 function apagarTudo() {
   while (listaTarefas.firstChild){
     listaTarefas.removeChild(listaTarefas.firstChild);
@@ -50,8 +50,7 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 //  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 
 function concluir(ev) { 
-  let concluidos = document.querySelectorAll('.concluido');
-  ev.target.style.textDecoration='line-through';
+  
+  ev.selecionados.style.textDecoration='line-through';
 }
-// adicionar text-decoration e arrumar para reconhecer clique no item
 listaTarefas.addEventListener('dblclick', concluir);
