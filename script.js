@@ -16,24 +16,24 @@ const botaoApagarTudo = document.querySelector('#apaga-tudo');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
 
-
 // ok 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
-function criarItemLista() {
+function criarItemLista(ev) {
   let itemNovo = document.createElement('li');
   itemNovo.innerText = input.value;
   listaTarefas.appendChild(itemNovo);
   itemNovo.className="item";
   input.value = '';
+  ev.target.backgroundColor='red'
 } 
 botaoCriar.addEventListener('click',criarItemLista) ;
 
 // ok 6ordenar itens por ordem de criação
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
-function mudarbg() {
+function mudarbg(ev) {
   for (i = 0; i < listaTarefas.length; i += 1);{
     let item = listaTarefas.children[i];
-    item.style.backgroundColor = 'gray';
+    ev.target.style.backgroundColor = 'gray';
   }
 }
 listaTarefas.addEventListener('click', mudarbg)
@@ -49,11 +49,9 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 
 //  9clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 
-function concluir() { 
-  for (i = 0; i < listaTarefas.length; i += 1);{
-    let li = document.querySelectorAll('li');
-    let itemTexto = li[1];
-    itemTexto.style.backgroundColor = 'blue';
-  }
-}// adicionar text-decoration e arrumar para reconhecer clique no item
+function concluir(ev) { 
+  let concluidos = document.querySelectorAll('.concluido');
+  ev.target.style.textDecoration='line-through';
+}
+// adicionar text-decoration e arrumar para reconhecer clique no item
 listaTarefas.addEventListener('dblclick', concluir);
