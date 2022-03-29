@@ -111,3 +111,10 @@ li {
   border-radius: 1em;
   padding-left: 15px;
 }
+.completed{
+  text-decoration: line-through;
+  
+}
+.selected{
+  background-color: gray;
+}
