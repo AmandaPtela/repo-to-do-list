@@ -14,7 +14,7 @@ const botaoApagarTudo = document.querySelector('#apaga-tudo');
 const botaoApagarFinalizados = document.querySelector('#remover-finalizados');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
-const itenss = document.getElementsByTagName('li');
+const itenss = document.getElementsByClassName('item');
 const selecionados = document.querySelector('.selected');
 const finalizados = document.querySelector('.finalizados');
 
@@ -32,9 +32,9 @@ botaoCriar.addEventListener('click', criarItemLista);
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg(ev) {
-  for ( i = 0; i < 1; i += 1); {
+  for ( i = 0; i < listaTarefas.length; i += 1); {
     let item = listaTarefas.children[i];
-    ev.target.className= 'selected';
+    ev.target.classList.toggle('selected');
   }
 }
 listaTarefas.addEventListener('click', mudarbg);
@@ -51,10 +51,7 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 // pesquisei no mdn. Toggle alterna a classe (on/off)
 function concluir(ev) { 
 
-  if (listaTarefas.classList.contains('completed') ){
-    //ev.target.classList.remove('completed');
-  }
-  else{  ev.target.classList.add('completed' , 'finalizados');}
+    ev.target.classList.toggle('completed');
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
@@ -72,7 +69,7 @@ function salvarLista(params) {
 
 }
 
-function removerselecionado() {
+function removerSelecionado() {
 }
 
 

@@ -93,6 +93,7 @@ ol {
   align-items: center;
   padding: 20px;
   text-align: left;
+  list-style: circle;
   padding-left: 50px;
   width: 200px;
   height: fit-content;
