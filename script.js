@@ -49,7 +49,7 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 
 function concluir(ev) { 
   ev.target.style.textDecoration = 'line-through solid black';
-  ev.target.className =' completed'
+  ev.target.className = 'completed'
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
