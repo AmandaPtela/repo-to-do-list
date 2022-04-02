@@ -15,8 +15,6 @@ const botaoApagarFinalizados = document.querySelector('#remover-finalizados');
 const listaTarefas = document.querySelector('#lista-tarefas');
 const input = document.querySelector('#texto-tarefa');
 const itenss = document.getElementsByClassName('item');
-const selecionados = document.querySelector('.selected');
-const finalizados = document.querySelector('.finalizados');
 
 // ok 5botao com id criar-tarefa ; qnd clica adiciona um item na lista e limpa o input
 function criarItemLista(ev) {
@@ -32,10 +30,9 @@ botaoCriar.addEventListener('click', criarItemLista);
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg(ev) {
-  for ( i = 0; i < listaTarefas.length; i += 1); {
-    let item = listaTarefas.children[i];
-    ev.target.classList.toggle('selected');
-  }
+  let selecionados = document.querySelector('.selected');
+  ev.target.classList.add('selected');
+  selecionados.classList.remove('selected');
 }
 listaTarefas.addEventListener('click', mudarbg);
 
@@ -56,11 +53,8 @@ function concluir(ev) {
 listaTarefas.addEventListener('dblclick', concluir);
 
 function apagarFinalizados() { 
-  let itemFinalizado = document.getElementsByClassName('finalizados');
-  for (i = 0; i < listaTarefas.length; i += 1){
-  if (itenss.classList.contains('.finalizados')){
-  listaTarefas.remove(itemFinalizado);}
-  }
+  let finalizados = document.querySelector('.completed');
+  listaTarefas.removeChild(listaTarefas.finalizados);
 }
 botaoApagarFinalizados.addEventListener('click', apagarFinalizados)
 
