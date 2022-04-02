@@ -47,14 +47,12 @@ botaoApagarTudo.addEventListener('click', apagarTudo);
 // ok 9 clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
 // pesquisei no mdn. Toggle alterna a classe (on/off)
 function concluir(ev) { 
-
-    ev.target.classList.toggle('completed');
+  ev.target.classList.toggle('completed');
 }
 listaTarefas.addEventListener('dblclick', concluir);
 
 function apagarFinalizados() { 
   let finalizados = document.querySelector('.completed');
-  listaTarefas.removeChild(listaTarefas.finalizados);
 }
 botaoApagarFinalizados.addEventListener('click', apagarFinalizados)
 
