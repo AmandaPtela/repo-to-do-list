@@ -19,9 +19,10 @@ botaoCriar.addEventListener('click', criarItemLista);
 
 // ok 7 clicar num item muda bg pra cinza rgb(128 128 128)
 function mudarbg(ev) {
-  const selecionados = document.querySelector('.selected');
-  ev.target.classList.add('selected');
-  selecionados.classList.remove('selected');
+  for ( i = 0; i < listaTarefas.length; i += 1); {
+    let item = listaTarefas.children[i];
+    ev.target.classList.toggle('selected');
+  }
 }
 listaTarefas.addEventListener('click', mudarbg);
 
@@ -34,4 +35,9 @@ function apagarTudo() {
 botaoApagarTudo.addEventListener('click', apagarTudo);
 
 // ok 9 clicar duas vezes marcar como concluído(riscar item) e clicar duas vezes p desfazer a ação
+function concluir(ev) { 
+
+  ev.target.classList.toggle('completed');
+}
+listaTarefas.addEventListener('dblclick', concluir);
 // pesquisei no mdn. Toggle alterna a classe (on/off)
